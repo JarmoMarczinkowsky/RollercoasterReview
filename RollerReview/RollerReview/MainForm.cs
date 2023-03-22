@@ -1,4 +1,5 @@
-﻿using RollerReview.Tables;
+﻿using Microsoft.EntityFrameworkCore;
+using RollerReview.Tables;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -27,12 +28,24 @@ namespace RollerReview
             this.dbContext.Database.EnsureDeleted();
             this.dbContext.Database.EnsureCreated();
 
+            this.dbContext.Users.Include(u => u.RoleId).Load();
+
         }
 
         private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
         {
             this.dbContext?.Dispose();
             this.dbContext = null;
+        }
+
+        private void btnLogin_Click(object sender, EventArgs e)
+        {
+            var getUser = this.dbContext.Users.FirstOrDefault(u => u.Username == txbUsername.Text);
+
+            if (getUser == null)
+            {
+                return;
+            }
         }
     }
 }
