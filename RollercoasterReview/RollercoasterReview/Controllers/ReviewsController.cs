@@ -48,7 +48,7 @@ namespace RollercoasterReview.Controllers
         // GET: Reviews/Create
         public IActionResult Create()
         {
-            ViewData["RollercoasterId"] = new SelectList(_context.Rollercoaster, "RollercoasterId", "RollercoasterId");
+            ViewData["Rollercoasters"] = new SelectList(_context.Rollercoaster, "RollercoasterId", "Name");
             return View();
         }
 
@@ -65,7 +65,7 @@ namespace RollercoasterReview.Controllers
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["RollercoasterId"] = new SelectList(_context.Rollercoaster, "RollercoasterId", "RollercoasterId", review.RollercoasterId);
+            ViewData["Rollercoasters"] = new SelectList(_context.Rollercoaster, "RollercoasterId", "Name", review.RollercoasterId);
             return View(review);
         }
 
@@ -82,7 +82,7 @@ namespace RollercoasterReview.Controllers
             {
                 return NotFound();
             }
-            ViewData["RollercoasterId"] = new SelectList(_context.Rollercoaster, "RollercoasterId", "RollercoasterId", review.RollercoasterId);
+            ViewData["Rollercoasters"] = new SelectList(_context.Rollercoaster, "RollercoasterId", "Name", review.RollercoasterId);
             return View(review);
         }
 
@@ -118,7 +118,7 @@ namespace RollercoasterReview.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["RollercoasterId"] = new SelectList(_context.Rollercoaster, "RollercoasterId", "RollercoasterId", review.RollercoasterId);
+            ViewData["Rollercoasters"] = new SelectList(_context.Rollercoaster, "RollercoasterId", "Name", review.RollercoasterId);
             return View(review);
         }
 
