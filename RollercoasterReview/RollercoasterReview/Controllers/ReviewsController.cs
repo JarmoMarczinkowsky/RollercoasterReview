@@ -23,8 +23,7 @@ namespace RollercoasterReview.Controllers
         public async Task<IActionResult> Index()
         {
             var applicationDbContext = _context.Review.Include(r => r.Rollercoaster).Include(r => r.User);
-            var applicationDbContext2 = _context.Rollercoaster.Include(r => r.Park);
-            return View(await applicationDbContext.ToListAsync(), await applicationDbContext2.ToListAsync());
+            return View(await applicationDbContext.ToListAsync());
         }
 
         // GET: Reviews/Details/5
