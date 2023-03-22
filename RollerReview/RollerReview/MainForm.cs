@@ -27,7 +27,6 @@ namespace RollerReview
             this.dbContext.Database.EnsureDeleted();
             this.dbContext.Database.EnsureCreated();
 
-
         }
 
         private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
