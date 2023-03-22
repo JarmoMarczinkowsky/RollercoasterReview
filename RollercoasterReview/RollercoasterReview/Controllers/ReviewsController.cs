@@ -22,7 +22,7 @@ namespace RollercoasterReview.Controllers
         // GET: Reviews
         public async Task<IActionResult> Index()
         {
-            var applicationDbContext = _context.Review.Include(r => r.Rollercoaster);
+            var applicationDbContext = _context.Review.Include(r => r.Rollercoaster).Include(r => r.User);
             return View(await applicationDbContext.ToListAsync());
         }
 
@@ -36,6 +36,7 @@ namespace RollercoasterReview.Controllers
 
             var review = await _context.Review
                 .Include(r => r.Rollercoaster)
+                .Include(r => r.User)
                 .FirstOrDefaultAsync(m => m.ReviewId == id);
             if (review == null)
             {
@@ -49,6 +50,7 @@ namespace RollercoasterReview.Controllers
         public IActionResult Create()
         {
             ViewData["Rollercoasters"] = new SelectList(_context.Rollercoaster, "RollercoasterId", "Name");
+            ViewData["Users"] = new SelectList(_context.Users, "Id", "UserName");
             return View();
         }
 
@@ -66,6 +68,7 @@ namespace RollercoasterReview.Controllers
                 return RedirectToAction(nameof(Index));
             }
             ViewData["Rollercoasters"] = new SelectList(_context.Rollercoaster, "RollercoasterId", "Name", review.RollercoasterId);
+            ViewData["Users"] = new SelectList(_context.Users, "Id", "UserName", review.UserId);
             return View(review);
         }
 
@@ -83,6 +86,7 @@ namespace RollercoasterReview.Controllers
                 return NotFound();
             }
             ViewData["Rollercoasters"] = new SelectList(_context.Rollercoaster, "RollercoasterId", "Name", review.RollercoasterId);
+            ViewData["Users"] = new SelectList(_context.Users, "Id", "UserName", review.UserId);
             return View(review);
         }
 
@@ -119,6 +123,7 @@ namespace RollercoasterReview.Controllers
                 return RedirectToAction(nameof(Index));
             }
             ViewData["Rollercoasters"] = new SelectList(_context.Rollercoaster, "RollercoasterId", "Name", review.RollercoasterId);
+            ViewData["Users"] = new SelectList(_context.Users, "Id", "UserName", review.UserId);
             return View(review);
         }
 
@@ -132,6 +137,7 @@ namespace RollercoasterReview.Controllers
 
             var review = await _context.Review
                 .Include(r => r.Rollercoaster)
+                .Include(r => r.User)
                 .FirstOrDefaultAsync(m => m.ReviewId == id);
             if (review == null)
             {

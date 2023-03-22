@@ -12,7 +12,7 @@ using RollercoasterReview.Data;
 namespace RollercoasterReview.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20230321113252_InitialCreate")]
+    [Migration("20230322100707_InitialCreate")]
     partial class InitialCreate
     {
         /// <inheritdoc />
@@ -236,15 +236,12 @@ namespace RollercoasterReview.Data.Migrations
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ParkId"));
 
                     b.Property<string>("City")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Country")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Name")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("ParkId");
@@ -266,17 +263,14 @@ namespace RollercoasterReview.Data.Migrations
                     b.Property<int>("RollercoasterId")
                         .HasColumnType("int");
 
-                    b.Property<int>("UserId")
-                        .HasColumnType("int");
-
-                    b.Property<string>("UserId1")
+                    b.Property<string>("UserId")
                         .HasColumnType("nvarchar(450)");
 
                     b.HasKey("RatingId");
 
                     b.HasIndex("RollercoasterId");
 
-                    b.HasIndex("UserId1");
+                    b.HasIndex("UserId");
 
                     b.ToTable("Rating");
                 });
@@ -293,26 +287,22 @@ namespace RollercoasterReview.Data.Migrations
                         .HasColumnType("datetime2");
 
                     b.Property<string>("Partner")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("RollercoasterId")
                         .HasColumnType("int");
 
-                    b.Property<DateTime>("Time")
-                        .HasColumnType("datetime2");
-
-                    b.Property<int>("UserId")
+                    b.Property<int>("Time")
                         .HasColumnType("int");
 
-                    b.Property<string>("UserId1")
+                    b.Property<string>("UserId")
                         .HasColumnType("nvarchar(450)");
 
                     b.HasKey("ReviewId");
 
                     b.HasIndex("RollercoasterId");
 
-                    b.HasIndex("UserId1");
+                    b.HasIndex("UserId");
 
                     b.ToTable("Review");
                 });
@@ -326,15 +316,12 @@ namespace RollercoasterReview.Data.Migrations
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("RollercoasterId"));
 
                     b.Property<string>("BackgroundInfo")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Image")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Name")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("ParkId")
@@ -411,7 +398,7 @@ namespace RollercoasterReview.Data.Migrations
 
                     b.HasOne("Microsoft.AspNetCore.Identity.IdentityUser", "User")
                         .WithMany()
-                        .HasForeignKey("UserId1");
+                        .HasForeignKey("UserId");
 
                     b.Navigation("Rollercoaster");
 
@@ -428,7 +415,7 @@ namespace RollercoasterReview.Data.Migrations
 
                     b.HasOne("Microsoft.AspNetCore.Identity.IdentityUser", "User")
                         .WithMany()
-                        .HasForeignKey("UserId1");
+                        .HasForeignKey("UserId");
 
                     b.Navigation("Rollercoaster");
 
