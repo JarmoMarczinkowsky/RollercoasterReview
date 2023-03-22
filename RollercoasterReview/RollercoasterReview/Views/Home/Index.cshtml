@@ -2,7 +2,137 @@
     ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+
+<div class="wrapper">
+    <div class="mainPart">
+        <h1 class="">MyRides</h1>
+        <img class="imgLogo" src="https://img.freepik.com/premium-vector/amusement-park-icon-simple-element-illustration-amusement-park-concept-symbol-design-can-be-used-web-mobile_159242-6895.jpg" />
+    </div>
+    <!--add empty table-->
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>
+                    Ride
+                </th>
+                <th>
+                    Time
+                </th>
+                <th>
+                    Park
+                </th>
+                <th>
+                    Rating
+                </th>
+                <th>
+
+                </th>
+
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    Testing
+                </td>
+                <td>
+                    Testing
+                </td>
+                <td>
+                    Testing
+                </td>
+                <td>
+                    Testing
+                </td>
+                <td>
+                    <a href="#" class="reviewButton">
+                        <p class="btnPlus">+</p>
+                        <p class="btnText">View</p>
+                    </a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Testing2
+                </td>
+                <td>
+                    Testing
+                </td>
+                <td>
+                    Testing
+                </td>
+                <td>
+                    Testing
+                </td>
+                <td>
+                    <a href="#" class="reviewButton">
+                        <p class="btnPlus">+</p>
+                        <p class="btnText">View</p>
+                    </a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="#" class="wideButton">Add New Ride</a>
+
 </div>
+
+<style>
+a {
+    text-decoration: none;
+}
+.imgLogo {
+        width: 100px;
+        height: 100px;
+
+    }
+
+.mainPart {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 22px;
+}
+
+.reviewButton {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.btnPlus {
+        background: #696D7D;
+    padding: 2px 5px;
+    border-radius: 2px 0 0 2px;
+}
+
+.btnText {
+    color: white;
+    background-color: orange;
+    padding: 2px 20px;
+    border-radius: 0 5px 5px 0;
+}
+
+.wideButton {
+    display: block;
+    width:100%;
+    padding: 10px 0;
+    border-radius: 5px;
+    background-color: orange;
+    text-align: center;
+    color: white;
+}
+
+.wideButton:hover {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    background-color: white;
+    border: 2px solid orange;
+    color: orange;
+}
+</style>
