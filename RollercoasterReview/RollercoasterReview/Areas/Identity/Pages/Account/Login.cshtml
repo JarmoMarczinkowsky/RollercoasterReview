@@ -30,16 +30,16 @@
                     </label>
                 </div>
                 <div>
-                    <button id="login-submit" type="submit" class="w-100 btn btn-lg btn-primary">Log in</button>
+                    <button style="background:orange;color:white;font-weight:bold" id="login-submit" type="submit" class="w-100 btn btn-lg">Log in</button>
                 </div>
                 <div>
-                    <p>
+                    <p style="margin-bottom:0">
                         <a id="forgot-password" asp-page="./ForgotPassword">Forgot your password?</a>
-                    </p>
-                    <p>
+                    </p style="margin-bottom:0">
+                    <p style="margin-bottom:0">
                         <a asp-page="./Register" asp-route-returnUrl="@Model.ReturnUrl">Register as a new user</a>
-                    </p>
-                    <p>
+                    </p style="margin-bottom:0">
+                    <p style="margin-bottom:0">
                         <a id="resend-confirmation" asp-page="./ResendEmailConfirmation">Resend email confirmation</a>
                     </p>
                 </div>
@@ -48,16 +48,14 @@
     </div>
     <div class="col-md-6 col-md-offset-2">
         <section>
-            <h3>Use another service to log in.</h3>
+            <h3>Notification:</h3>
             <hr />
             @{
                 if ((Model.ExternalLogins?.Count ?? 0) == 0)
                 {
                     <div>
-                        <p>
-                            There are no external authentication services configured. See this <a href="https://go.microsoft.com/fwlink/?LinkID=532715">article
-                            about setting up this ASP.NET application to support logging in via external services</a>.
-                        </p>
+                        <h2>ASP.NET zuigt, tijd voor WinForms</h2>
+                        <a href="https://www.youtube.com/watch?v=UbaBI-XxGbo?autoplay=1">Klik hier voor een beter alternatief</a>
                     </div>
                 }
                 else
