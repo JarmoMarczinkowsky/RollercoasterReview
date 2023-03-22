@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using RollerReview.MyClasses;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -40,6 +41,22 @@ namespace RollerReview.Tables
                 .HasOne(ru => ru.Role)
                 .WithMany(r => r.RoleUsers)
                 .HasForeignKey(ru => ru.RoleId);
+
+            modelBuilder.Entity<User>().HasData(
+                new User { UserId = 1, RoleId = 1, Username = "admin", Password = Global.HashPassword("a"), Email = "admin@admin.com" },
+                new User { UserId = 2, RoleId = 2, Username = "Jarmo", Password = Global.HashPassword("jarmo123"), Email = "jarmo@jarmo.com" }
+
+
+
+                );
+
+            modelBuilder.Entity<Role>().HasData(
+                new Role { RoleId = 1, Name = "Admin" },
+                new Role { RoleId = 2, Name = "User" }
+                
+                );
         }
+
+        
     }
 }
