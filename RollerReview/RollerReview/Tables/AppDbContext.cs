@@ -45,9 +45,6 @@ namespace RollerReview.Tables
             modelBuilder.Entity<User>().HasData(
                 new User { UserId = 1, RoleId = 1, Username = "admin", Password = Global.HashPassword("a"), Email = "admin@admin.com" },
                 new User { UserId = 2, RoleId = 2, Username = "Jarmo", Password = Global.HashPassword("jarmo123"), Email = "jarmo@jarmo.com" }
-
-
-
                 );
 
             modelBuilder.Entity<Role>().HasData(
