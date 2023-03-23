@@ -1,4 +1,5 @@
-﻿using System;
+﻿using RollerReview.Tables;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -30,6 +31,6 @@ namespace RollerReview.MyClasses
             currentForm.Close();
         }
 
-        public static string Username { get; set; }
+        public static User UserData { get; set; }
     }
 }

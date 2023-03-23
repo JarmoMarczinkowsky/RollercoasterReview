@@ -31,6 +31,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btnLogout = new System.Windows.Forms.Button();
             this.lblWelcome = new System.Windows.Forms.Label();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -63,16 +65,28 @@
             this.lblWelcome.Text = "Welcome, ....";
             this.lblWelcome.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(131, 116);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 82;
+            this.dataGridView1.RowTemplate.Height = 33;
+            this.dataGridView1.Size = new System.Drawing.Size(1015, 644);
+            this.dataGridView1.TabIndex = 3;
+            // 
             // UserReviewForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1274, 879);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.lblWelcome);
             this.Controls.Add(this.btnLogout);
             this.Controls.Add(this.label1);
             this.Name = "UserReviewForm";
             this.Text = "UserReviewForm";
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -83,5 +97,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnLogout;
         private System.Windows.Forms.Label lblWelcome;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }
