@@ -55,13 +55,13 @@
             // 
             // lblWelcome
             // 
-            this.lblWelcome.AutoSize = true;
-            this.lblWelcome.Location = new System.Drawing.Point(985, 23);
+            this.lblWelcome.Location = new System.Drawing.Point(666, 18);
             this.lblWelcome.Name = "lblWelcome";
-            this.lblWelcome.Size = new System.Drawing.Size(137, 25);
+            this.lblWelcome.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lblWelcome.Size = new System.Drawing.Size(456, 35);
             this.lblWelcome.TabIndex = 2;
             this.lblWelcome.Text = "Welcome, ....";
-            this.lblWelcome.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            this.lblWelcome.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // UserReviewForm
             // 

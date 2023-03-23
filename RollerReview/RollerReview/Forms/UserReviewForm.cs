@@ -17,7 +17,7 @@ namespace RollerReview.Forms
         {
             InitializeComponent();
             
-            lblWelcome.Text = $"Welcome... {Global.Username}";
+            lblWelcome.Text = $"Welcome, {Global.Username}";
         }
     }
 }

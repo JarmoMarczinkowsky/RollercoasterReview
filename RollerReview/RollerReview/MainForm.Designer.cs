@@ -36,15 +36,16 @@
             // 
             // txbUsername
             // 
-            this.txbUsername.Location = new System.Drawing.Point(170, 487);
+            this.txbUsername.Location = new System.Drawing.Point(175, 497);
             this.txbUsername.Name = "txbUsername";
             this.txbUsername.Size = new System.Drawing.Size(400, 31);
             this.txbUsername.TabIndex = 0;
             // 
             // txbPassword
             // 
-            this.txbPassword.Location = new System.Drawing.Point(170, 537);
+            this.txbPassword.Location = new System.Drawing.Point(175, 534);
             this.txbPassword.Name = "txbPassword";
+            this.txbPassword.PasswordChar = '*';
             this.txbPassword.Size = new System.Drawing.Size(400, 31);
             this.txbPassword.TabIndex = 1;
             // 
@@ -52,7 +53,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial", 13.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(167, 288);
+            this.label1.Location = new System.Drawing.Point(167, 300);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(174, 44);
             this.label1.TabIndex = 2;
@@ -60,7 +61,7 @@
             // 
             // btnLogin
             // 
-            this.btnLogin.Location = new System.Drawing.Point(170, 613);
+            this.btnLogin.Location = new System.Drawing.Point(175, 595);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(215, 52);
             this.btnLogin.TabIndex = 2;
