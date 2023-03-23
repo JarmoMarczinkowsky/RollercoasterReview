@@ -28,7 +28,8 @@ namespace RollerReview
             this.dbContext.Database.EnsureDeleted();
             this.dbContext.Database.EnsureCreated();
 
-            this.dbContext.Users.Include(u => u.RoleId).Load();
+            this.dbContext.Users.Load();
+            this.dbContext.Roles.Load();
 
         }
 
