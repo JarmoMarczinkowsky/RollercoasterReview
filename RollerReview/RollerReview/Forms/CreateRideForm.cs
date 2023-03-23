@@ -1,4 +1,5 @@
-﻿using RollerReview.Tables;
+﻿using Microsoft.EntityFrameworkCore;
+using RollerReview.Tables;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -19,6 +20,10 @@ namespace RollerReview.Forms
         {
             InitializeComponent();
 
+            this.dbContext = new AppDbContext();
+            this.dbContext.Parks.Load();
+
+            this.parkBindingSource.DataSource = this.dbContext.Parks.Local.ToBindingList();
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
@@ -33,5 +38,6 @@ namespace RollerReview.Forms
             this.dbContext.Rollercoasters.Add(newRide);
             this.dbContext.SaveChanges();
         }
+
     }
 }

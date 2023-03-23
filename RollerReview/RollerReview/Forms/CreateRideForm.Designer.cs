@@ -33,13 +33,13 @@
             this.label1 = new System.Windows.Forms.Label();
             this.txbRideName = new System.Windows.Forms.TextBox();
             this.cboxPark = new System.Windows.Forms.ComboBox();
+            this.parkBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.label2 = new System.Windows.Forms.Label();
             this.dtpYearRide = new System.Windows.Forms.DateTimePicker();
             this.label3 = new System.Windows.Forms.Label();
             this.lblName = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.btnLogout = new System.Windows.Forms.Button();
-            this.parkBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.parkBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -79,6 +79,10 @@
             this.cboxPark.Size = new System.Drawing.Size(347, 33);
             this.cboxPark.TabIndex = 3;
             this.cboxPark.ValueMember = "ParkId";
+            // 
+            // parkBindingSource
+            // 
+            this.parkBindingSource.DataSource = typeof(RollerReview.Tables.Park);
             // 
             // label2
             // 
@@ -132,10 +136,6 @@
             this.btnLogout.TabIndex = 9;
             this.btnLogout.Text = "Logout";
             this.btnLogout.UseVisualStyleBackColor = true;
-            // 
-            // parkBindingSource
-            // 
-            this.parkBindingSource.DataSource = typeof(RollerReview.Tables.Park);
             // 
             // CreateRideForm
             // 

@@ -184,6 +184,7 @@
     </Compile>
     <None Include="packages.config" />
     <None Include="Properties\DataSources\RollerReview.Tables.Park.datasource" />
+    <None Include="Properties\DataSources\RollerReview.Tables.User.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
