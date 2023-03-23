@@ -1,4 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using RollerReview.Forms;
+using RollerReview.MyClasses;
 using RollerReview.Tables;
 using System;
 using System.Collections.Generic;
@@ -46,6 +48,13 @@ namespace RollerReview
             if (getUser == null)
             {
                 return;
+            }
+
+            if(Global.CheckPassword(txbPassword.Text, getUser.Password))
+            {
+                Global.Username = getUser.Username;
+
+                Global.FormDirect(this, new UserReviewForm());
             }
         }
     }

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace RollerReview.MyClasses
 {
@@ -21,5 +22,14 @@ namespace RollerReview.MyClasses
         {
             return HashPassword(password) == hash;
         }
+
+        public static void FormDirect(Form currentForm, Form gotoForm)
+        {
+            currentForm.Hide();
+            gotoForm.ShowDialog();
+            currentForm.Close();
+        }
+
+        public static string Username { get; set; }
     }
 }
