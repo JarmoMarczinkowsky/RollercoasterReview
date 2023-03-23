@@ -86,6 +86,7 @@
             this.btnAddRide.Text = "Add new ride";
             this.btnAddRide.UseVisualStyleBackColor = true;
             this.btnAddRide.Visible = false;
+            this.btnAddRide.Click += new System.EventHandler(this.btnAddRide_Click);
             // 
             // UserReviewForm
             // 

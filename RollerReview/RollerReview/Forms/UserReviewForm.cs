@@ -29,5 +29,11 @@ namespace RollerReview.Forms
         {
             Global.Logout(this);
         }
+
+        private void btnAddRide_Click(object sender, EventArgs e)
+        {
+            CreateRideForm createRideForm = new CreateRideForm();
+            createRideForm.ShowDialog();
+        }
     }
 }

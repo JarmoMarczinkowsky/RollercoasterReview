@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.btnAdd = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.txbRideName = new System.Windows.Forms.TextBox();
@@ -38,16 +39,19 @@
             this.lblName = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.btnLogout = new System.Windows.Forms.Button();
+            this.parkBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.parkBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // btnAdd
             // 
-            this.btnAdd.Location = new System.Drawing.Point(140, 397);
+            this.btnAdd.Location = new System.Drawing.Point(140, 392);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(484, 67);
             this.btnAdd.TabIndex = 0;
             this.btnAdd.Text = "Add";
             this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // label1
             // 
@@ -67,11 +71,14 @@
             // 
             // cboxPark
             // 
+            this.cboxPark.DataSource = this.parkBindingSource;
+            this.cboxPark.DisplayMember = "Name";
             this.cboxPark.FormattingEnabled = true;
             this.cboxPark.Location = new System.Drawing.Point(262, 290);
             this.cboxPark.Name = "cboxPark";
             this.cboxPark.Size = new System.Drawing.Size(347, 33);
             this.cboxPark.TabIndex = 3;
+            this.cboxPark.ValueMember = "ParkId";
             // 
             // label2
             // 
@@ -126,11 +133,15 @@
             this.btnLogout.Text = "Logout";
             this.btnLogout.UseVisualStyleBackColor = true;
             // 
+            // parkBindingSource
+            // 
+            this.parkBindingSource.DataSource = typeof(RollerReview.Tables.Park);
+            // 
             // CreateRideForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(748, 609);
+            this.ClientSize = new System.Drawing.Size(748, 493);
             this.Controls.Add(this.btnLogout);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.lblName);
@@ -143,6 +154,7 @@
             this.Controls.Add(this.btnAdd);
             this.Name = "CreateRideForm";
             this.Text = "CreateRideForm";
+            ((System.ComponentModel.ISupportInitialize)(this.parkBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -160,5 +172,6 @@
         private System.Windows.Forms.Label lblName;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button btnLogout;
+        private System.Windows.Forms.BindingSource parkBindingSource;
     }
 }

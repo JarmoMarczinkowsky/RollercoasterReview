@@ -1,4 +1,5 @@
-﻿using System;
+﻿using RollerReview.Tables;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +13,25 @@ namespace RollerReview.Forms
 {
     public partial class CreateRideForm : Form
     {
+        private AppDbContext dbContext;
+
         public CreateRideForm()
         {
             InitializeComponent();
+
+        }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            var newRide = new Rollercoaster()
+            {
+                Name = txbRideName.Text,
+                ParkId = (int)cboxPark.SelectedValue,
+                Build = dtpYearRide.Value
+            };
+
+            this.dbContext.Rollercoasters.Add(newRide);
+            this.dbContext.SaveChanges();
         }
     }
 }
