@@ -32,6 +32,7 @@
             this.btnLogout = new System.Windows.Forms.Button();
             this.lblWelcome = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.btnAddRide = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -54,6 +55,7 @@
             this.btnLogout.TabIndex = 1;
             this.btnLogout.Text = "Logout";
             this.btnLogout.UseVisualStyleBackColor = true;
+            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
             // 
             // lblWelcome
             // 
@@ -75,11 +77,22 @@
             this.dataGridView1.Size = new System.Drawing.Size(1015, 644);
             this.dataGridView1.TabIndex = 3;
             // 
+            // btnAddRide
+            // 
+            this.btnAddRide.Location = new System.Drawing.Point(131, 778);
+            this.btnAddRide.Name = "btnAddRide";
+            this.btnAddRide.Size = new System.Drawing.Size(1015, 73);
+            this.btnAddRide.TabIndex = 4;
+            this.btnAddRide.Text = "Add new ride";
+            this.btnAddRide.UseVisualStyleBackColor = true;
+            this.btnAddRide.Visible = false;
+            // 
             // UserReviewForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1274, 879);
+            this.Controls.Add(this.btnAddRide);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.lblWelcome);
             this.Controls.Add(this.btnLogout);
@@ -98,5 +111,6 @@
         private System.Windows.Forms.Button btnLogout;
         private System.Windows.Forms.Label lblWelcome;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Button btnAddRide;
     }
 }

@@ -31,6 +31,12 @@ namespace RollerReview.MyClasses
             currentForm.Close();
         }
 
+        public static void Logout(Form currentForm)
+        {
+            UserData = null;
+            FormDirect(currentForm, new MainForm());
+        }
+
         public static User UserData { get; set; }
     }
 }
