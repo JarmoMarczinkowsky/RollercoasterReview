@@ -29,6 +29,12 @@ namespace RollerReview.Forms
                 btnAddRide.Visible = true;
             }
 
+            this.dbContext = new AppDbContext();
+            this.dbContext.Rollercoasters
+                .Include(r => r.Park)
+                .Load();
+
+            this.dgvRollercoaster.DataSource = this.dbContext.Rollercoasters.Local.ToBindingList();
             
         }
 

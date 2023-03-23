@@ -57,6 +57,12 @@ namespace RollerReview.Tables
                 new Park { ParkId = 2, Name = "Bobbejaanland", City = "Kasterlee", Country = "Belgium" },
                 new Park { ParkId = 3, Name = "Disney", City = "Paris", Country = "France" }
                 );
+
+            modelBuilder.Entity<Rollercoaster>().HasData(
+                new Rollercoaster { RollercoasterId = 1, ParkId = 1, Name = "Python", Build = DateTime.Now, Description = "Epic rollercoaster" },
+                new Rollercoaster { RollercoasterId = 2, ParkId = 2, Name = "Typhoon", Build = DateTime.Now, Description = "Whirlwind" },
+                new Rollercoaster { RollercoasterId = 3, ParkId = 3, Name = "Space Mountain", Build = DateTime.Now, Description = "To infinity and beyond" }
+                );
         }
 
         

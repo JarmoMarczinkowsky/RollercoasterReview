@@ -32,13 +32,13 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btnLogout = new System.Windows.Forms.Button();
             this.lblWelcome = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvRollercoaster = new System.Windows.Forms.DataGridView();
             this.btnAddRide = new System.Windows.Forms.Button();
-            this.rollercoasterBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.parkDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.buildDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.rollercoasterBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvRollercoaster)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rollercoasterBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -73,22 +73,22 @@
             this.lblWelcome.Text = "Welcome, ....";
             this.lblWelcome.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // dataGridView1
+            // dgvRollercoaster
             // 
-            this.dataGridView1.AutoGenerateColumns = false;
-            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvRollercoaster.AutoGenerateColumns = false;
+            this.dgvRollercoaster.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dgvRollercoaster.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvRollercoaster.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.nameDataGridViewTextBoxColumn,
             this.parkDataGridViewTextBoxColumn,
             this.buildDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.rollercoasterBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(131, 116);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 82;
-            this.dataGridView1.RowTemplate.Height = 33;
-            this.dataGridView1.Size = new System.Drawing.Size(1015, 644);
-            this.dataGridView1.TabIndex = 3;
+            this.dgvRollercoaster.DataSource = this.rollercoasterBindingSource;
+            this.dgvRollercoaster.Location = new System.Drawing.Point(131, 116);
+            this.dgvRollercoaster.Name = "dgvRollercoaster";
+            this.dgvRollercoaster.RowHeadersWidth = 25;
+            this.dgvRollercoaster.RowTemplate.Height = 33;
+            this.dgvRollercoaster.Size = new System.Drawing.Size(1015, 644);
+            this.dgvRollercoaster.TabIndex = 3;
             // 
             // btnAddRide
             // 
@@ -100,10 +100,6 @@
             this.btnAddRide.UseVisualStyleBackColor = true;
             this.btnAddRide.Visible = false;
             this.btnAddRide.Click += new System.EventHandler(this.btnAddRide_Click);
-            // 
-            // rollercoasterBindingSource
-            // 
-            this.rollercoasterBindingSource.DataSource = typeof(RollerReview.Tables.Rollercoaster);
             // 
             // nameDataGridViewTextBoxColumn
             // 
@@ -129,19 +125,23 @@
             this.buildDataGridViewTextBoxColumn.Name = "buildDataGridViewTextBoxColumn";
             this.buildDataGridViewTextBoxColumn.Width = 105;
             // 
+            // rollercoasterBindingSource
+            // 
+            this.rollercoasterBindingSource.DataSource = typeof(RollerReview.Tables.Rollercoaster);
+            // 
             // UserReviewForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1274, 879);
             this.Controls.Add(this.btnAddRide);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgvRollercoaster);
             this.Controls.Add(this.lblWelcome);
             this.Controls.Add(this.btnLogout);
             this.Controls.Add(this.label1);
             this.Name = "UserReviewForm";
             this.Text = "UserReviewForm";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvRollercoaster)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.rollercoasterBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -153,7 +153,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnLogout;
         private System.Windows.Forms.Label lblWelcome;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvRollercoaster;
         private System.Windows.Forms.Button btnAddRide;
         private System.Windows.Forms.BindingSource rollercoasterBindingSource;
         private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
