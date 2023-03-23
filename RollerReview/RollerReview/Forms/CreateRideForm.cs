@@ -32,6 +32,7 @@ namespace RollerReview.Forms
             {
                 Name = txbRideName.Text,
                 ParkId = (int)cboxPark.SelectedValue,
+                Description = txbDescription.Text,
                 Build = dtpYearRide.Value
             };
 

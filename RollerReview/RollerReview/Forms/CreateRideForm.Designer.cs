@@ -40,6 +40,8 @@
             this.lblName = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.btnLogout = new System.Windows.Forms.Button();
+            this.txbDescription = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.parkBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -47,7 +49,7 @@
             // 
             this.btnAdd.Location = new System.Drawing.Point(140, 392);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(484, 67);
+            this.btnAdd.Size = new System.Drawing.Size(469, 67);
             this.btnAdd.TabIndex = 0;
             this.btnAdd.Text = "Add";
             this.btnAdd.UseVisualStyleBackColor = true;
@@ -56,7 +58,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(135, 255);
+            this.label1.Location = new System.Drawing.Point(135, 234);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(121, 25);
             this.label1.TabIndex = 1;
@@ -64,7 +66,7 @@
             // 
             // txbRideName
             // 
-            this.txbRideName.Location = new System.Drawing.Point(262, 252);
+            this.txbRideName.Location = new System.Drawing.Point(262, 231);
             this.txbRideName.Name = "txbRideName";
             this.txbRideName.Size = new System.Drawing.Size(347, 31);
             this.txbRideName.TabIndex = 2;
@@ -74,7 +76,7 @@
             this.cboxPark.DataSource = this.parkBindingSource;
             this.cboxPark.DisplayMember = "Name";
             this.cboxPark.FormattingEnabled = true;
-            this.cboxPark.Location = new System.Drawing.Point(262, 290);
+            this.cboxPark.Location = new System.Drawing.Point(262, 155);
             this.cboxPark.Name = "cboxPark";
             this.cboxPark.Size = new System.Drawing.Size(347, 33);
             this.cboxPark.TabIndex = 3;
@@ -87,7 +89,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(135, 293);
+            this.label2.Location = new System.Drawing.Point(135, 158);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(62, 25);
             this.label2.TabIndex = 4;
@@ -95,7 +97,7 @@
             // 
             // dtpYearRide
             // 
-            this.dtpYearRide.Location = new System.Drawing.Point(262, 329);
+            this.dtpYearRide.Location = new System.Drawing.Point(262, 194);
             this.dtpYearRide.Name = "dtpYearRide";
             this.dtpYearRide.Size = new System.Drawing.Size(347, 31);
             this.dtpYearRide.TabIndex = 5;
@@ -103,7 +105,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(135, 334);
+            this.label3.Location = new System.Drawing.Point(135, 199);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(104, 25);
             this.label3.TabIndex = 6;
@@ -137,11 +139,30 @@
             this.btnLogout.Text = "Logout";
             this.btnLogout.UseVisualStyleBackColor = true;
             // 
+            // txbDescription
+            // 
+            this.txbDescription.Location = new System.Drawing.Point(262, 267);
+            this.txbDescription.Multiline = true;
+            this.txbDescription.Name = "txbDescription";
+            this.txbDescription.Size = new System.Drawing.Size(347, 121);
+            this.txbDescription.TabIndex = 10;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(135, 270);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(120, 25);
+            this.label5.TabIndex = 11;
+            this.label5.Text = "Description";
+            // 
             // CreateRideForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(748, 493);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.txbDescription);
             this.Controls.Add(this.btnLogout);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.lblName);
@@ -173,5 +194,7 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button btnLogout;
         private System.Windows.Forms.BindingSource parkBindingSource;
+        private System.Windows.Forms.TextBox txbDescription;
+        private System.Windows.Forms.Label label5;
     }
 }
