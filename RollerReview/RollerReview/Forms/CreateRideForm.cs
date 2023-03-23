@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using RollerReview.MyClasses;
 using RollerReview.Tables;
 using System;
 using System.Collections.Generic;
@@ -20,6 +21,8 @@ namespace RollerReview.Forms
         {
             InitializeComponent();
 
+            lblWelcome.Text = $"Welcome, {Global.UserData.Username}";
+
             this.dbContext = new AppDbContext();
             this.dbContext.Parks.Load();
 
@@ -28,6 +31,12 @@ namespace RollerReview.Forms
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
+            if(txbDescription.Text == "" || txbRideName.Text == "")
+            {
+                MessageBox.Show("Please fill in all fields");
+                return;
+            }
+
             var newRide = new Rollercoaster()
             {
                 Name = txbRideName.Text,
@@ -38,6 +47,7 @@ namespace RollerReview.Forms
 
             this.dbContext.Rollercoasters.Add(newRide);
             this.dbContext.SaveChanges();
+            this.Close();
         }
 
     }

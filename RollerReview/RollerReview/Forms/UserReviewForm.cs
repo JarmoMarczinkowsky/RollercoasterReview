@@ -1,4 +1,6 @@
-﻿using RollerReview.MyClasses;
+﻿using Microsoft.EntityFrameworkCore;
+using RollerReview.MyClasses;
+using RollerReview.Tables;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,16 +15,21 @@ namespace RollerReview.Forms
 {
     public partial class UserReviewForm : Form
     {
+        private AppDbContext dbContext;
+
         public UserReviewForm()
         {
             InitializeComponent();
             
+
             lblWelcome.Text = $"Welcome, {Global.UserData.Username}";
 
             if (Global.UserData.RoleId == 1)
             {
                 btnAddRide.Visible = true;
             }
+
+            
         }
 
         private void btnLogout_Click(object sender, EventArgs e)

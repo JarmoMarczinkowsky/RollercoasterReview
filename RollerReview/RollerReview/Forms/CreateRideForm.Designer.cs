@@ -38,7 +38,7 @@
             this.dtpYearRide = new System.Windows.Forms.DateTimePicker();
             this.label3 = new System.Windows.Forms.Label();
             this.lblName = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.lblWelcome = new System.Windows.Forms.Label();
             this.btnLogout = new System.Windows.Forms.Button();
             this.txbDescription = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -75,6 +75,7 @@
             // 
             this.cboxPark.DataSource = this.parkBindingSource;
             this.cboxPark.DisplayMember = "Name";
+            this.cboxPark.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboxPark.FormattingEnabled = true;
             this.cboxPark.Location = new System.Drawing.Point(262, 155);
             this.cboxPark.Name = "cboxPark";
@@ -121,14 +122,14 @@
             this.lblName.TabIndex = 7;
             this.lblName.Text = "MyRides";
             // 
-            // label4
+            // lblWelcome
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(475, 20);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(119, 25);
-            this.label4.TabIndex = 8;
-            this.label4.Text = "Welcome...";
+            this.lblWelcome.Location = new System.Drawing.Point(291, 15);
+            this.lblWelcome.Name = "lblWelcome";
+            this.lblWelcome.Size = new System.Drawing.Size(305, 35);
+            this.lblWelcome.TabIndex = 8;
+            this.lblWelcome.Text = "Welcome...";
+            this.lblWelcome.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // btnLogout
             // 
@@ -164,7 +165,7 @@
             this.Controls.Add(this.label5);
             this.Controls.Add(this.txbDescription);
             this.Controls.Add(this.btnLogout);
-            this.Controls.Add(this.label4);
+            this.Controls.Add(this.lblWelcome);
             this.Controls.Add(this.lblName);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.dtpYearRide);
@@ -191,7 +192,7 @@
         private System.Windows.Forms.DateTimePicker dtpYearRide;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label lblName;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label lblWelcome;
         private System.Windows.Forms.Button btnLogout;
         private System.Windows.Forms.BindingSource parkBindingSource;
         private System.Windows.Forms.TextBox txbDescription;
