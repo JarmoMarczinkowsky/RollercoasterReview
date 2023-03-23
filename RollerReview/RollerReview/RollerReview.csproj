@@ -134,6 +134,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Forms\CreateRideForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CreateRideForm.Designer.cs">
+      <DependentUpon>CreateRideForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\UserReviewForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -157,6 +163,9 @@
     <Compile Include="Tables\RoleUser.cs" />
     <Compile Include="Tables\Rollercoaster.cs" />
     <Compile Include="Tables\User.cs" />
+    <EmbeddedResource Include="Forms\CreateRideForm.resx">
+      <DependentUpon>CreateRideForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\UserReviewForm.resx">
       <DependentUpon>UserReviewForm.cs</DependentUpon>
     </EmbeddedResource>
