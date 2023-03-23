@@ -50,7 +50,12 @@ namespace RollerReview.Tables
             modelBuilder.Entity<Role>().HasData(
                 new Role { RoleId = 1, Name = "Admin" },
                 new Role { RoleId = 2, Name = "User" }
-                
+                );
+
+            modelBuilder.Entity<Park>().HasData(
+                new Park { ParkId = 1, Name = "Efteling", City = "Kaatsheuvel", Country = "The Netherlands" },
+                new Park { ParkId = 2, Name = "Bobbejaanland", City = "Kasterlee", Country = "Belgium" },
+                new Park { ParkId = 3, Name = "Disney", City = "Paris", Country = "France" }
                 );
         }
 
