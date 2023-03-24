@@ -44,5 +44,20 @@ namespace RollerReview.Forms
 
             pboxRide.ImageLocation = _chosencoaster.RollercoasterImage;
         }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+            Global.FormDirect(this, new RidesForm());
+        }
+
+        private void lblAppName_MouseEnter(object sender, EventArgs e)
+        {
+            Cursor = Cursors.Hand;
+        }
+
+        private void lblAppName_MouseLeave(object sender, EventArgs e)
+        {
+            Cursor = Cursors.Default;
+        }
     }
 }

@@ -76,6 +76,8 @@
             // 
             // dgvRollercoaster
             // 
+            this.dgvRollercoaster.AllowUserToAddRows = false;
+            this.dgvRollercoaster.AllowUserToDeleteRows = false;
             this.dgvRollercoaster.AutoGenerateColumns = false;
             this.dgvRollercoaster.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dgvRollercoaster.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
@@ -98,6 +100,7 @@
             this.dgvRollercoaster.EnableHeadersVisualStyles = false;
             this.dgvRollercoaster.Location = new System.Drawing.Point(131, 189);
             this.dgvRollercoaster.Name = "dgvRollercoaster";
+            this.dgvRollercoaster.ReadOnly = true;
             this.dgvRollercoaster.RowHeadersWidth = 25;
             this.dgvRollercoaster.RowTemplate.Height = 33;
             this.dgvRollercoaster.Size = new System.Drawing.Size(1015, 583);
@@ -122,6 +125,7 @@
             this.nameDataGridViewTextBoxColumn.HeaderText = "Name";
             this.nameDataGridViewTextBoxColumn.MinimumWidth = 10;
             this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
+            this.nameDataGridViewTextBoxColumn.ReadOnly = true;
             this.nameDataGridViewTextBoxColumn.Width = 113;
             // 
             // parkDataGridViewTextBoxColumn
@@ -130,6 +134,7 @@
             this.parkDataGridViewTextBoxColumn.HeaderText = "Park";
             this.parkDataGridViewTextBoxColumn.MinimumWidth = 10;
             this.parkDataGridViewTextBoxColumn.Name = "parkDataGridViewTextBoxColumn";
+            this.parkDataGridViewTextBoxColumn.ReadOnly = true;
             this.parkDataGridViewTextBoxColumn.Width = 101;
             // 
             // buildDataGridViewTextBoxColumn
@@ -138,6 +143,7 @@
             this.buildDataGridViewTextBoxColumn.HeaderText = "Build";
             this.buildDataGridViewTextBoxColumn.MinimumWidth = 10;
             this.buildDataGridViewTextBoxColumn.Name = "buildDataGridViewTextBoxColumn";
+            this.buildDataGridViewTextBoxColumn.ReadOnly = true;
             this.buildDataGridViewTextBoxColumn.Width = 105;
             // 
             // rollercoasterBindingSource
