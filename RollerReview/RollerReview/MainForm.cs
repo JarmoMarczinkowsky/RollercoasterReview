@@ -54,7 +54,7 @@ namespace RollerReview
             if(Global.CheckPassword(txbPassword.Text, getUser.Password))
             {
                 Global.UserData = (User)getUser;
-                Global.FormDirect(this, new UserReviewForm());
+                Global.FormDirect(this, new RidesForm());
             }
         }
     }

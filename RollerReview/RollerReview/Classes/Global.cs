@@ -37,6 +37,12 @@ namespace RollerReview.MyClasses
             FormDirect(currentForm, new MainForm());
         }
 
+        public static int Random(int min, int max)
+        {
+            Random random = new Random();
+            return random.Next(min, max);
+        }
+
         public static User UserData { get; set; }
     }
 }

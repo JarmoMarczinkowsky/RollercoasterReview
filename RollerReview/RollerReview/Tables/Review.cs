@@ -10,6 +10,7 @@ namespace RollerReview.Tables
     {
         public int ReviewId { get; set; }
         public DateTime ReviewDate { get; set; }
+        public string Partner { get; set; }
 
         public int RollercoasterId { get; set; }
         public Rollercoaster Rollercoaster { get; set; }

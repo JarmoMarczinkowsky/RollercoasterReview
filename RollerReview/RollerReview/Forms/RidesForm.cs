@@ -13,11 +13,11 @@ using System.Windows.Forms;
 
 namespace RollerReview.Forms
 {
-    public partial class UserReviewForm : Form
+    public partial class RidesForm : Form
     {
         private AppDbContext dbContext;
 
-        public UserReviewForm()
+        public RidesForm()
         {
             InitializeComponent();
             
@@ -47,6 +47,18 @@ namespace RollerReview.Forms
         {
             CreateRideForm createRideForm = new CreateRideForm();
             createRideForm.ShowDialog();
+        }
+
+        private void dgvRollercoaster_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            var selectedReview = (Rollercoaster)this.dgvRollercoaster.CurrentRow?.DataBoundItem;
+
+            if (selectedReview == null)
+            {
+                return;
+            }
+
+            Global.FormDirect(this, new ReviewPage(selectedReview));
         }
     }
 }

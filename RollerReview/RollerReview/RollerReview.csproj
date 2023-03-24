@@ -140,11 +140,17 @@
     <Compile Include="Forms\CreateRideForm.Designer.cs">
       <DependentUpon>CreateRideForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\UserReviewForm.cs">
+    <Compile Include="Forms\ReviewPage.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\UserReviewForm.Designer.cs">
-      <DependentUpon>UserReviewForm.cs</DependentUpon>
+    <Compile Include="Forms\ReviewPage.Designer.cs">
+      <DependentUpon>ReviewPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\RidesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\RidesForm.Designer.cs">
+      <DependentUpon>RidesForm.cs</DependentUpon>
     </Compile>
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
@@ -166,8 +172,11 @@
     <EmbeddedResource Include="Forms\CreateRideForm.resx">
       <DependentUpon>CreateRideForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\UserReviewForm.resx">
-      <DependentUpon>UserReviewForm.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\ReviewPage.resx">
+      <DependentUpon>ReviewPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\RidesForm.resx">
+      <DependentUpon>RidesForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
@@ -184,6 +193,7 @@
     </Compile>
     <None Include="packages.config" />
     <None Include="Properties\DataSources\RollerReview.Tables.Park.datasource" />
+    <None Include="Properties\DataSources\RollerReview.Tables.Review.datasource" />
     <None Include="Properties\DataSources\RollerReview.Tables.Rollercoaster.datasource" />
     <None Include="Properties\DataSources\RollerReview.Tables.User.datasource" />
     <None Include="Properties\Settings.settings">

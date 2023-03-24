@@ -59,9 +59,16 @@ namespace RollerReview.Tables
                 );
 
             modelBuilder.Entity<Rollercoaster>().HasData(
-                new Rollercoaster { RollercoasterId = 1, ParkId = 1, Name = "Python", Build = DateTime.Now, Description = "Epic rollercoaster" },
-                new Rollercoaster { RollercoasterId = 2, ParkId = 2, Name = "Typhoon", Build = DateTime.Now, Description = "Whirlwind" },
-                new Rollercoaster { RollercoasterId = 3, ParkId = 3, Name = "Space Mountain", Build = DateTime.Now, Description = "To infinity and beyond" }
+                new Rollercoaster { RollercoasterId = 1, ParkId = 1, Name = "Python", Build = DateTime.Now, Description = "Epic rollercoaster", RollercoasterImage = "https://www.efteling.com/nl/-/media/images/nieuw-park/park/attractions/python/1024x576-python-loopings.jpg" },
+                new Rollercoaster { RollercoasterId = 2, ParkId = 2, Name = "Typhoon", Build = DateTime.Now, Description = "Whirlwind", RollercoasterImage = "https://upload.wikimedia.org/wikipedia/commons/6/65/Typhoon.JPG" },
+                new Rollercoaster { RollercoasterId = 3, ParkId = 3, Name = "Space Mountain", Build = DateTime.Now, Description = "To infinity and beyond", RollercoasterImage = "https://cdn1.parksmedia.wdprapps.disney.com/resize/mwImage/1/1600/900/75/dam/wdpro-assets/parks-and-tickets/attractions/magic-kingdom/space-mountain/space-mountain-00.jpg?1658978220420" }
+                );
+
+            modelBuilder.Entity<Review>().HasData(
+                new Review { ReviewId = 1, RollercoasterId = 1, UserId = 1, Partner = "Henk Henkerson", ReviewDate = DateTime.Now.AddDays(Global.Random(0, 10)) },
+                new Review { ReviewId = 2, RollercoasterId = 1, UserId = 1, Partner = "Jan Jansen", ReviewDate = DateTime.Now.AddDays(-1 * Global.Random(45, 200)) },
+                new Review { ReviewId = 3, RollercoasterId = 1, UserId = 2, Partner = "John Johnson", ReviewDate = DateTime.Now.AddDays(Global.Random(19, 200)) },
+                new Review { ReviewId = 4, RollercoasterId = 2, UserId = 1, Partner = "Piet Pieterson", ReviewDate = DateTime.Now.AddDays(-1) }
                 );
         }
 

@@ -1,6 +1,6 @@
 ﻿namespace RollerReview.Forms
 {
-    partial class UserReviewForm
+    partial class RidesForm
     {
         /// <summary>
         /// Required designer variable.
@@ -102,6 +102,7 @@
             this.dgvRollercoaster.RowTemplate.Height = 33;
             this.dgvRollercoaster.Size = new System.Drawing.Size(1015, 583);
             this.dgvRollercoaster.TabIndex = 3;
+            this.dgvRollercoaster.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvRollercoaster_CellDoubleClick);
             // 
             // btnAddRide
             // 
@@ -143,7 +144,7 @@
             // 
             this.rollercoasterBindingSource.DataSource = typeof(RollerReview.Tables.Rollercoaster);
             // 
-            // UserReviewForm
+            // RidesForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -153,7 +154,7 @@
             this.Controls.Add(this.lblWelcome);
             this.Controls.Add(this.btnLogout);
             this.Controls.Add(this.label1);
-            this.Name = "UserReviewForm";
+            this.Name = "RidesForm";
             this.Text = "UserReviewForm";
             ((System.ComponentModel.ISupportInitialize)(this.dgvRollercoaster)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.rollercoasterBindingSource)).EndInit();
