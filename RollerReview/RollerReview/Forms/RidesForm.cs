@@ -29,13 +29,17 @@ namespace RollerReview.Forms
                 btnAddRide.Visible = true;
             }
 
+            
+            
+        }
+        private void RidesForm_Load(object sender, EventArgs e)
+        {
             this.dbContext = new AppDbContext();
             this.dbContext.Rollercoasters
                 .Include(r => r.Park)
                 .Load();
 
             this.dgvRollercoaster.DataSource = this.dbContext.Rollercoasters.Local.ToBindingList();
-            
         }
 
         private void btnLogout_Click(object sender, EventArgs e)
@@ -60,5 +64,6 @@ namespace RollerReview.Forms
 
             Global.FormDirect(this, new ReviewPage(selectedReview));
         }
+
     }
 }

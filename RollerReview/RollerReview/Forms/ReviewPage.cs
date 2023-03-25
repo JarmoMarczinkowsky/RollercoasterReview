@@ -22,7 +22,6 @@ namespace RollerReview.Forms
         {
             InitializeComponent();
 
-            this.dbContext = new AppDbContext();
             _chosencoaster = chosenCoaster;
 
             lblRollercoaster.Text = _chosencoaster.Name;
@@ -44,6 +43,8 @@ namespace RollerReview.Forms
 
         private void ReviewPage_Load(object sender, EventArgs e)
         {
+            this.dbContext = new AppDbContext();
+
             this.dbContext.Reviews.Where(r => r.UserId == Global.UserData.UserId && r.RollercoasterId == _chosencoaster.RollercoasterId).OrderByDescending(d => d.ReviewDate).Load();
             this.reviewBindingSource.DataSource = this.dbContext.Reviews.Local.ToBindingList();
 

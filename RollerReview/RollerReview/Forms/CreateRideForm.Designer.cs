@@ -180,6 +180,7 @@
             this.Controls.Add(this.btnAdd);
             this.Name = "CreateRideForm";
             this.Text = "CreateRideForm";
+            this.Load += new System.EventHandler(this.CreateRideForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.parkBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

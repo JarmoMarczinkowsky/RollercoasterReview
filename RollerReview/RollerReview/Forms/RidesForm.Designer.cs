@@ -163,6 +163,7 @@
             this.Controls.Add(this.label1);
             this.Name = "RidesForm";
             this.Text = "UserReviewForm";
+            this.Load += new System.EventHandler(this.RidesForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvRollercoaster)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.rollercoasterBindingSource)).EndInit();
             this.ResumeLayout(false);

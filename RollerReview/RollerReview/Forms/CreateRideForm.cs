@@ -22,7 +22,9 @@ namespace RollerReview.Forms
             InitializeComponent();
 
             lblWelcome.Text = $"Welcome, {Global.UserData.Username}";
-
+        }
+        private void CreateRideForm_Load(object sender, EventArgs e)
+        {
             this.dbContext = new AppDbContext();
             this.dbContext.Parks.Load();
 
