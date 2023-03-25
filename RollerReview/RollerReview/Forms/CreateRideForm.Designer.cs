@@ -98,6 +98,8 @@
             // 
             // dtpYearRide
             // 
+            this.dtpYearRide.CustomFormat = "MM/dd/yyyy hh:mm";
+            this.dtpYearRide.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtpYearRide.Location = new System.Drawing.Point(262, 194);
             this.dtpYearRide.Name = "dtpYearRide";
             this.dtpYearRide.Size = new System.Drawing.Size(347, 31);

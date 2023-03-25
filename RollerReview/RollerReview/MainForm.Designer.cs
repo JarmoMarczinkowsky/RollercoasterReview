@@ -43,7 +43,7 @@
             // 
             // txbPassword
             // 
-            this.txbPassword.Location = new System.Drawing.Point(119, 375);
+            this.txbPassword.Location = new System.Drawing.Point(119, 380);
             this.txbPassword.Name = "txbPassword";
             this.txbPassword.PasswordChar = '*';
             this.txbPassword.Size = new System.Drawing.Size(400, 31);
