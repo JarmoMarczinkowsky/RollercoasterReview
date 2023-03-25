@@ -29,11 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvReview = new System.Windows.Forms.DataGridView();
-            this.reviewDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Partner = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.reviewBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.btnRideAgain = new System.Windows.Forms.Button();
             this.lblAppName = new System.Windows.Forms.Label();
             this.pboxRide = new System.Windows.Forms.PictureBox();
@@ -44,46 +42,45 @@
             this.lblYearBuilt = new System.Windows.Forms.Label();
             this.btnEdit = new System.Windows.Forms.Button();
             this.lblRollercoaster = new System.Windows.Forms.Label();
+            this.btnRefresh = new System.Windows.Forms.Button();
+            this.btnReturn = new System.Windows.Forms.Button();
+            this.reviewDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.reviewBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dgvReview)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.reviewBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pboxRide)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.reviewBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // dgvReview
             // 
+            this.dgvReview.AllowUserToAddRows = false;
+            this.dgvReview.AllowUserToDeleteRows = false;
             this.dgvReview.AutoGenerateColumns = false;
             this.dgvReview.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dgvReview.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgvReview.BackgroundColor = System.Drawing.SystemColors.Control;
             this.dgvReview.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvReview.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvReview.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvReview.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvReview.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.reviewDateDataGridViewTextBoxColumn,
             this.Partner});
             this.dgvReview.DataSource = this.reviewBindingSource;
             this.dgvReview.EnableHeadersVisualStyles = false;
-            this.dgvReview.Location = new System.Drawing.Point(272, 298);
+            this.dgvReview.Location = new System.Drawing.Point(272, 301);
             this.dgvReview.Name = "dgvReview";
+            this.dgvReview.ReadOnly = true;
             this.dgvReview.RowHeadersWidth = 25;
             this.dgvReview.RowTemplate.Height = 33;
             this.dgvReview.Size = new System.Drawing.Size(718, 346);
             this.dgvReview.TabIndex = 1;
-            // 
-            // reviewDateDataGridViewTextBoxColumn
-            // 
-            this.reviewDateDataGridViewTextBoxColumn.DataPropertyName = "ReviewDate";
-            this.reviewDateDataGridViewTextBoxColumn.HeaderText = "Date";
-            this.reviewDateDataGridViewTextBoxColumn.MinimumWidth = 10;
-            this.reviewDateDataGridViewTextBoxColumn.Name = "reviewDateDataGridViewTextBoxColumn";
-            this.reviewDateDataGridViewTextBoxColumn.Width = 102;
             // 
             // Partner
             // 
@@ -91,11 +88,8 @@
             this.Partner.HeaderText = "Partner";
             this.Partner.MinimumWidth = 10;
             this.Partner.Name = "Partner";
+            this.Partner.ReadOnly = true;
             this.Partner.Width = 127;
-            // 
-            // reviewBindingSource
-            // 
-            this.reviewBindingSource.DataSource = typeof(RollerReview.Tables.Review);
             // 
             // btnRideAgain
             // 
@@ -107,6 +101,7 @@
             this.btnRideAgain.TabIndex = 2;
             this.btnRideAgain.Text = "I rode this ride again";
             this.btnRideAgain.UseVisualStyleBackColor = false;
+            this.btnRideAgain.Click += new System.EventHandler(this.btnRideAgain_Click);
             // 
             // lblAppName
             // 
@@ -142,7 +137,7 @@
             // 
             // lblWelcome
             // 
-            this.lblWelcome.Location = new System.Drawing.Point(478, 18);
+            this.lblWelcome.Location = new System.Drawing.Point(252, 18);
             this.lblWelcome.Name = "lblWelcome";
             this.lblWelcome.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lblWelcome.Size = new System.Drawing.Size(456, 35);
@@ -184,12 +179,13 @@
             // 
             this.btnEdit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.btnEdit.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnEdit.Location = new System.Drawing.Point(932, 87);
+            this.btnEdit.Location = new System.Drawing.Point(940, 87);
             this.btnEdit.Name = "btnEdit";
-            this.btnEdit.Size = new System.Drawing.Size(149, 46);
+            this.btnEdit.Size = new System.Drawing.Size(134, 46);
             this.btnEdit.TabIndex = 11;
             this.btnEdit.Text = "Edit";
             this.btnEdit.UseVisualStyleBackColor = false;
+            this.btnEdit.Visible = false;
             // 
             // lblRollercoaster
             // 
@@ -201,11 +197,48 @@
             this.lblRollercoaster.TabIndex = 12;
             this.lblRollercoaster.Text = "Rollercoaster";
             // 
+            // btnRefresh
+            // 
+            this.btnRefresh.Location = new System.Drawing.Point(97, 301);
+            this.btnRefresh.Name = "btnRefresh";
+            this.btnRefresh.Size = new System.Drawing.Size(149, 46);
+            this.btnRefresh.TabIndex = 13;
+            this.btnRefresh.Text = "Refresh";
+            this.btnRefresh.UseVisualStyleBackColor = true;
+            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
+            // 
+            // btnReturn
+            // 
+            this.btnReturn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.btnReturn.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnReturn.Location = new System.Drawing.Point(800, 12);
+            this.btnReturn.Name = "btnReturn";
+            this.btnReturn.Size = new System.Drawing.Size(134, 46);
+            this.btnReturn.TabIndex = 14;
+            this.btnReturn.Text = "Return";
+            this.btnReturn.UseVisualStyleBackColor = false;
+            this.btnReturn.Click += new System.EventHandler(this.btnReturn_Click);
+            // 
+            // reviewDateDataGridViewTextBoxColumn
+            // 
+            this.reviewDateDataGridViewTextBoxColumn.DataPropertyName = "ReviewDate";
+            this.reviewDateDataGridViewTextBoxColumn.HeaderText = "Date";
+            this.reviewDateDataGridViewTextBoxColumn.MinimumWidth = 10;
+            this.reviewDateDataGridViewTextBoxColumn.Name = "reviewDateDataGridViewTextBoxColumn";
+            this.reviewDateDataGridViewTextBoxColumn.ReadOnly = true;
+            this.reviewDateDataGridViewTextBoxColumn.Width = 102;
+            // 
+            // reviewBindingSource
+            // 
+            this.reviewBindingSource.DataSource = typeof(RollerReview.Tables.Review);
+            // 
             // ReviewPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1093, 763);
+            this.Controls.Add(this.btnReturn);
+            this.Controls.Add(this.btnRefresh);
             this.Controls.Add(this.lblRollercoaster);
             this.Controls.Add(this.btnEdit);
             this.Controls.Add(this.lblYearBuilt);
@@ -221,8 +254,8 @@
             this.Text = "ReviewPage";
             this.Load += new System.EventHandler(this.ReviewPage_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvReview)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.reviewBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pboxRide)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.reviewBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -243,5 +276,7 @@
         private System.Windows.Forms.Label lblYearBuilt;
         private System.Windows.Forms.Button btnEdit;
         private System.Windows.Forms.Label lblRollercoaster;
+        private System.Windows.Forms.Button btnRefresh;
+        private System.Windows.Forms.Button btnReturn;
     }
 }

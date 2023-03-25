@@ -16,7 +16,7 @@ namespace RollerReview.Forms
     public partial class ReviewPage : Form
     {
         private AppDbContext dbContext;
-        private Rollercoaster _chosencoaster;
+        public static Rollercoaster _chosencoaster;
 
         public ReviewPage(Rollercoaster chosenCoaster)
         {
@@ -30,6 +30,11 @@ namespace RollerReview.Forms
             lblYearBuilt.Text = _chosencoaster.Build.ToString("dd-MMMM-yyyy");
 
             lblWelcome.Text = $"Welcome, {Global.UserData.Username}";
+
+            if (Global.UserData.RoleId == 1)
+            {
+                btnEdit.Visible = true;
+            }
         }
 
         private void btnLogout_Click(object sender, EventArgs e)
@@ -58,6 +63,25 @@ namespace RollerReview.Forms
         private void lblAppName_MouseLeave(object sender, EventArgs e)
         {
             Cursor = Cursors.Default;
+        }
+
+        private void btnRideAgain_Click(object sender, EventArgs e)
+        {
+            //Global.FormDirect(this, new RegisterRidingRideForm());
+            RegisterRidingRideForm registerRidingRideForm = new RegisterRidingRideForm();
+            registerRidingRideForm.ShowDialog();
+        }
+
+        private void btnRefresh_Click(object sender, EventArgs e)
+        {
+            this.dbContext.Reviews.Where(r => r.UserId == Global.UserData.UserId && r.RollercoasterId == _chosencoaster.RollercoasterId).OrderByDescending(d => d.ReviewDate).Load();
+            this.reviewBindingSource.DataSource = this.dbContext.Reviews.Local.ToBindingList();
+
+        }
+
+        private void btnReturn_Click(object sender, EventArgs e)
+        {
+            Global.FormDirect(this, new RidesForm());
         }
     }
 }

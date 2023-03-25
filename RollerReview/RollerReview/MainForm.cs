@@ -28,7 +28,7 @@ namespace RollerReview
         {
             this.dbContext = new AppDbContext();
 
-            this.dbContext.Database.EnsureDeleted();
+            //this.dbContext.Database.EnsureDeleted();
             this.dbContext.Database.EnsureCreated();
 
             this.dbContext.Users.Load();
