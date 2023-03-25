@@ -31,7 +31,9 @@
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvReview = new System.Windows.Forms.DataGridView();
+            this.reviewDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Partner = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.reviewBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.btnRideAgain = new System.Windows.Forms.Button();
             this.lblAppName = new System.Windows.Forms.Label();
             this.pboxRide = new System.Windows.Forms.PictureBox();
@@ -44,11 +46,9 @@
             this.lblRollercoaster = new System.Windows.Forms.Label();
             this.btnRefresh = new System.Windows.Forms.Button();
             this.btnReturn = new System.Windows.Forms.Button();
-            this.reviewDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.reviewBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dgvReview)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pboxRide)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.reviewBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pboxRide)).BeginInit();
             this.SuspendLayout();
             // 
             // dgvReview
@@ -82,6 +82,15 @@
             this.dgvReview.Size = new System.Drawing.Size(718, 346);
             this.dgvReview.TabIndex = 1;
             // 
+            // reviewDateDataGridViewTextBoxColumn
+            // 
+            this.reviewDateDataGridViewTextBoxColumn.DataPropertyName = "ReviewDate";
+            this.reviewDateDataGridViewTextBoxColumn.HeaderText = "Date";
+            this.reviewDateDataGridViewTextBoxColumn.MinimumWidth = 10;
+            this.reviewDateDataGridViewTextBoxColumn.Name = "reviewDateDataGridViewTextBoxColumn";
+            this.reviewDateDataGridViewTextBoxColumn.ReadOnly = true;
+            this.reviewDateDataGridViewTextBoxColumn.Width = 102;
+            // 
             // Partner
             // 
             this.Partner.DataPropertyName = "Partner";
@@ -90,6 +99,10 @@
             this.Partner.Name = "Partner";
             this.Partner.ReadOnly = true;
             this.Partner.Width = 127;
+            // 
+            // reviewBindingSource
+            // 
+            this.reviewBindingSource.DataSource = typeof(RollerReview.Tables.Review);
             // 
             // btnRideAgain
             // 
@@ -137,7 +150,7 @@
             // 
             // lblWelcome
             // 
-            this.lblWelcome.Location = new System.Drawing.Point(252, 18);
+            this.lblWelcome.Location = new System.Drawing.Point(338, 23);
             this.lblWelcome.Name = "lblWelcome";
             this.lblWelcome.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lblWelcome.Size = new System.Drawing.Size(456, 35);
@@ -219,19 +232,6 @@
             this.btnReturn.UseVisualStyleBackColor = false;
             this.btnReturn.Click += new System.EventHandler(this.btnReturn_Click);
             // 
-            // reviewDateDataGridViewTextBoxColumn
-            // 
-            this.reviewDateDataGridViewTextBoxColumn.DataPropertyName = "ReviewDate";
-            this.reviewDateDataGridViewTextBoxColumn.HeaderText = "Date";
-            this.reviewDateDataGridViewTextBoxColumn.MinimumWidth = 10;
-            this.reviewDateDataGridViewTextBoxColumn.Name = "reviewDateDataGridViewTextBoxColumn";
-            this.reviewDateDataGridViewTextBoxColumn.ReadOnly = true;
-            this.reviewDateDataGridViewTextBoxColumn.Width = 102;
-            // 
-            // reviewBindingSource
-            // 
-            this.reviewBindingSource.DataSource = typeof(RollerReview.Tables.Review);
-            // 
             // ReviewPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
@@ -254,8 +254,8 @@
             this.Text = "ReviewPage";
             this.Load += new System.EventHandler(this.ReviewPage_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvReview)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pboxRide)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.reviewBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pboxRide)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

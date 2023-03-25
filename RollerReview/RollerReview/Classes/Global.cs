@@ -1,4 +1,5 @@
-﻿using RollerReview.Tables;
+﻿using RollerReview.Forms;
+using RollerReview.Tables;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -34,6 +35,12 @@ namespace RollerReview.MyClasses
         public static void Logout(Form currentForm)
         {
             UserData = null;
+
+            if(ReviewPage._chosencoaster !=  null)
+            {
+                ReviewPage._chosencoaster = null;
+            }
+
             FormDirect(currentForm, new MainForm());
         }
 
