@@ -34,11 +34,11 @@
             this.btnLogout = new System.Windows.Forms.Button();
             this.lblWelcome = new System.Windows.Forms.Label();
             this.dgvRollercoaster = new System.Windows.Forms.DataGridView();
-            this.btnAddRide = new System.Windows.Forms.Button();
             this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.parkDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.buildDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.rollercoasterBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.btnAddRide = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvRollercoaster)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rollercoasterBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -56,12 +56,13 @@
             // 
             // btnLogout
             // 
+            this.btnLogout.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.btnLogout.Location = new System.Drawing.Point(1128, 12);
             this.btnLogout.Name = "btnLogout";
             this.btnLogout.Size = new System.Drawing.Size(134, 46);
             this.btnLogout.TabIndex = 1;
             this.btnLogout.Text = "Logout";
-            this.btnLogout.UseVisualStyleBackColor = true;
+            this.btnLogout.UseVisualStyleBackColor = false;
             this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
             // 
             // lblWelcome
@@ -107,18 +108,6 @@
             this.dgvRollercoaster.TabIndex = 3;
             this.dgvRollercoaster.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvRollercoaster_CellDoubleClick);
             // 
-            // btnAddRide
-            // 
-            this.btnAddRide.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.btnAddRide.Location = new System.Drawing.Point(131, 778);
-            this.btnAddRide.Name = "btnAddRide";
-            this.btnAddRide.Size = new System.Drawing.Size(1015, 73);
-            this.btnAddRide.TabIndex = 4;
-            this.btnAddRide.Text = "Add new ride";
-            this.btnAddRide.UseVisualStyleBackColor = false;
-            this.btnAddRide.Visible = false;
-            this.btnAddRide.Click += new System.EventHandler(this.btnAddRide_Click);
-            // 
             // nameDataGridViewTextBoxColumn
             // 
             this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
@@ -149,6 +138,18 @@
             // rollercoasterBindingSource
             // 
             this.rollercoasterBindingSource.DataSource = typeof(RollerReview.Tables.Rollercoaster);
+            // 
+            // btnAddRide
+            // 
+            this.btnAddRide.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.btnAddRide.Location = new System.Drawing.Point(131, 778);
+            this.btnAddRide.Name = "btnAddRide";
+            this.btnAddRide.Size = new System.Drawing.Size(1015, 73);
+            this.btnAddRide.TabIndex = 4;
+            this.btnAddRide.Text = "Add new ride";
+            this.btnAddRide.UseVisualStyleBackColor = false;
+            this.btnAddRide.Visible = false;
+            this.btnAddRide.Click += new System.EventHandler(this.btnAddRide_Click);
             // 
             // RidesForm
             // 
