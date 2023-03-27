@@ -22,6 +22,7 @@ namespace RollerReview
         {
             InitializeComponent();
 
+            lblError.Text = "";
         }
 
         private void MainForm_Load(object sender, EventArgs e)
@@ -44,10 +45,14 @@ namespace RollerReview
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
+            lblError.Text = "";
             var getUser = this.dbContext.Users.FirstOrDefault(u => u.Username == txbUsername.Text);
 
             if (getUser == null)
             {
+                lblError.Text = "User not found";
+                txbPassword.Text = "";
+                txbUsername.Text = "";
                 return;
             }
 
@@ -56,6 +61,12 @@ namespace RollerReview
                 Global.UserData = (User)getUser;
                 Global.FormDirect(this, new RidesForm());
             }
+        }
+
+        private void btnRegister_Click(object sender, EventArgs e)
+        {
+            RegisterForm registerForm = new RegisterForm();
+            registerForm.ShowDialog();
         }
     }
 }
