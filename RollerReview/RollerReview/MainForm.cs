@@ -1,4 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using RollerReview.Forms;
+using RollerReview.MyClasses;
 using RollerReview.Tables;
 using System;
 using System.Collections.Generic;
@@ -6,6 +8,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -25,10 +28,11 @@ namespace RollerReview
         {
             this.dbContext = new AppDbContext();
 
-            this.dbContext.Database.EnsureDeleted();
+            //this.dbContext.Database.EnsureDeleted();
             this.dbContext.Database.EnsureCreated();
 
-            this.dbContext.Users.Include(u => u.RoleId).Load();
+            this.dbContext.Users.Load();
+            this.dbContext.Roles.Load();
 
         }
 
@@ -45,6 +49,12 @@ namespace RollerReview
             if (getUser == null)
             {
                 return;
+            }
+
+            if(Global.CheckPassword(txbPassword.Text, getUser.Password))
+            {
+                Global.UserData = (User)getUser;
+                Global.FormDirect(this, new RidesForm());
             }
         }
     }

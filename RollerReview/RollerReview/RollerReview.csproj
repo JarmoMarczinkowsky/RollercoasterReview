@@ -8,10 +8,11 @@
     <OutputType>WinExe</OutputType>
     <RootNamespace>RollerReview</RootNamespace>
     <AssemblyName>RollerReview</AssemblyName>
-    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -133,6 +134,30 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Forms\CreateRideForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CreateRideForm.Designer.cs">
+      <DependentUpon>CreateRideForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\RegisterRidingRideForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\RegisterRidingRideForm.Designer.cs">
+      <DependentUpon>RegisterRidingRideForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ReviewPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ReviewPage.Designer.cs">
+      <DependentUpon>ReviewPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\RidesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\RidesForm.Designer.cs">
+      <DependentUpon>RidesForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -150,6 +175,18 @@
     <Compile Include="Tables\RoleUser.cs" />
     <Compile Include="Tables\Rollercoaster.cs" />
     <Compile Include="Tables\User.cs" />
+    <EmbeddedResource Include="Forms\CreateRideForm.resx">
+      <DependentUpon>CreateRideForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\RegisterRidingRideForm.resx">
+      <DependentUpon>RegisterRidingRideForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ReviewPage.resx">
+      <DependentUpon>ReviewPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\RidesForm.resx">
+      <DependentUpon>RidesForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -161,8 +198,13 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\RollerReview.Tables.Park.datasource" />
+    <None Include="Properties\DataSources\RollerReview.Tables.Review.datasource" />
+    <None Include="Properties\DataSources\RollerReview.Tables.Rollercoaster.datasource" />
+    <None Include="Properties\DataSources\RollerReview.Tables.User.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

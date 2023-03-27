@@ -13,5 +13,10 @@ namespace RollerReview.Tables
         public string Country { get; set; }
         public string City { get; set; }
 
+        public override string ToString()
+        {
+            return Name;
+        }
+
     }
 }
