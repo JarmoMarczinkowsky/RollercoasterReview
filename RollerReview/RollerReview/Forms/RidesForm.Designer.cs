@@ -39,6 +39,7 @@
             this.buildDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.rollercoasterBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.btnAddRide = new System.Windows.Forms.Button();
+            this.btnReturn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvRollercoaster)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rollercoasterBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -67,7 +68,7 @@
             // 
             // lblWelcome
             // 
-            this.lblWelcome.Location = new System.Drawing.Point(666, 18);
+            this.lblWelcome.Location = new System.Drawing.Point(532, 18);
             this.lblWelcome.Name = "lblWelcome";
             this.lblWelcome.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lblWelcome.Size = new System.Drawing.Size(456, 35);
@@ -151,11 +152,23 @@
             this.btnAddRide.Visible = false;
             this.btnAddRide.Click += new System.EventHandler(this.btnAddRide_Click);
             // 
+            // btnReturn
+            // 
+            this.btnReturn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.btnReturn.Location = new System.Drawing.Point(988, 12);
+            this.btnReturn.Name = "btnReturn";
+            this.btnReturn.Size = new System.Drawing.Size(134, 46);
+            this.btnReturn.TabIndex = 5;
+            this.btnReturn.Text = "Return";
+            this.btnReturn.UseVisualStyleBackColor = false;
+            this.btnReturn.Click += new System.EventHandler(this.btnReturn_Click);
+            // 
             // RidesForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1274, 879);
+            this.Controls.Add(this.btnReturn);
             this.Controls.Add(this.btnAddRide);
             this.Controls.Add(this.dgvRollercoaster);
             this.Controls.Add(this.lblWelcome);
@@ -182,5 +195,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn parkDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn buildDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Button btnReturn;
     }
 }
