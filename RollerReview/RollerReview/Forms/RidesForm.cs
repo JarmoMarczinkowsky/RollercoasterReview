@@ -65,5 +65,9 @@ namespace RollerReview.Forms
             Global.FormDirect(this, new ReviewPage(selectedReview));
         }
 
+        private void btnReturn_Click(object sender, EventArgs e)
+        {
+            Global.Return(this);
+        }
     }
 }

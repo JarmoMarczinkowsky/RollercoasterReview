@@ -27,9 +27,15 @@ namespace RollerReview.MyClasses
 
         public static void FormDirect(Form currentForm, Form gotoForm)
         {
-            currentForm.Hide();
-            gotoForm.ShowDialog();
-            currentForm.Close();
+            if (currentForm != null || gotoForm != null)
+            {
+                currentForm.Hide();
+                gotoForm.Closed += (s, args) => currentForm.Close();
+                gotoForm.Show();
+                FrmOld = currentForm;
+            }
+            
+            //currentForm.Close();
         }
 
         public static void Logout(Form currentForm)
@@ -44,6 +50,12 @@ namespace RollerReview.MyClasses
             FormDirect(currentForm, new MainForm());
         }
 
+        public static void Return(Form currentForm)
+        {
+            FormDirect(currentForm, FrmOld);
+            
+        }
+        
         public static int Random(int min, int max)
         {
             Random random = new Random();
@@ -51,5 +63,6 @@ namespace RollerReview.MyClasses
         }
 
         public static User UserData { get; set; }
+        public static Form FrmOld { get; set; } = new MainForm();
     }
 }
