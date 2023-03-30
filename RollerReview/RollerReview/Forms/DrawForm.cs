@@ -72,12 +72,11 @@ namespace RollerReview.Forms
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            // Calculate the bounds of the drawing area by subtracting the button and form borders from the form bounds
-            var drawingBounds = new Rectangle(
-                this.Left + this.Padding.Left,
-                this.Top + this.Padding.Top,
-                this.ClientSize.Width,
-                this.ClientSize.Height);
+            var bounds = this.Bounds;
+
+            Rectangle screenRectangle = this.RectangleToScreen(this.ClientRectangle);
+
+            int titleHeight = screenRectangle.Top - this.Top - SystemInformation.CaptionHeight;
 
             // Show a save file dialog to allow the user to choose a file name and location
             using (var dialog = new SaveFileDialog())
@@ -85,9 +84,9 @@ namespace RollerReview.Forms
                 dialog.Filter = "PNG Image|*.png";
                 if (dialog.ShowDialog() == DialogResult.OK)
                 {
-                    // Create a bitmap of the drawing area and save it to the chosen file location
-                    var bitmap = new Bitmap(drawingBounds.Width, drawingBounds.Height);
-                    this.DrawToBitmap(bitmap, drawingBounds);
+                    // Create a bitmap of the current form and save it to the chosen file location
+                    var bitmap = new Bitmap(this.Width, this.Height);
+                    this.DrawToBitmap(bitmap, new Rectangle(0, 0, this.Width, this.Height));
                     bitmap.Save(dialog.FileName);
                 }
             }
