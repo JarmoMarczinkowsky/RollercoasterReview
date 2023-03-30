@@ -69,5 +69,11 @@ namespace RollerReview.Forms
         {
             Global.Return(this);
         }
+
+        private void btnDrawPage_Click(object sender, EventArgs e)
+        {
+            DrawForm drawForm = new DrawForm();
+            drawForm.ShowDialog();
+        }
     }
 }
