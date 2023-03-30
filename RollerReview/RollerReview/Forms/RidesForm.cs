@@ -72,7 +72,7 @@ namespace RollerReview.Forms
 
         private void btnDrawPage_Click(object sender, EventArgs e)
         {
-            DrawForm drawForm = new DrawForm();
+            DrawPicturebox drawForm = new DrawPicturebox();
             drawForm.ShowDialog();
         }
     }
