@@ -140,6 +140,12 @@
     <Compile Include="Forms\CreateRideForm.Designer.cs">
       <DependentUpon>CreateRideForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\DrawPicturebox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\DrawPicturebox.Designer.cs">
+      <DependentUpon>DrawPicturebox.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\RegisterForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -183,6 +189,9 @@
     <Compile Include="Tables\User.cs" />
     <EmbeddedResource Include="Forms\CreateRideForm.resx">
       <DependentUpon>CreateRideForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\DrawPicturebox.resx">
+      <DependentUpon>DrawPicturebox.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\RegisterForm.resx">
       <DependentUpon>RegisterForm.cs</DependentUpon>
