@@ -75,5 +75,11 @@ namespace RollerReview.Forms
             DrawPicturebox drawForm = new DrawPicturebox();
             drawForm.ShowDialog();
         }
+
+        private void btnShowDraw_Click(object sender, EventArgs e)
+        {
+            ShowDrawingForm showDrawingForm = new ShowDrawingForm();
+            showDrawingForm.ShowDialog();
+        }
     }
 }

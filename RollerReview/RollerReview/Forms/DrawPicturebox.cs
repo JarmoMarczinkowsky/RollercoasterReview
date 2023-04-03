@@ -71,7 +71,7 @@ namespace RollerReview.Forms
 
             var newImage = new UploadImage()
             {
-                ImageName = MyArt.Name,
+                ImageName = txbName.Text,
                 Image = myImg
             };
 
