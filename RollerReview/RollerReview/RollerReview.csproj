@@ -186,6 +186,7 @@
     <Compile Include="Tables\Role.cs" />
     <Compile Include="Tables\RoleUser.cs" />
     <Compile Include="Tables\Rollercoaster.cs" />
+    <Compile Include="Tables\UploadImage.cs" />
     <Compile Include="Tables\User.cs" />
     <EmbeddedResource Include="Forms\CreateRideForm.resx">
       <DependentUpon>CreateRideForm.cs</DependentUpon>

@@ -13,6 +13,7 @@ namespace RollerReview.Tables
         public string Password { get; set; }
         public string Email { get; set; }
         public string UserImage { get; set; }
+        public byte[] Drawing { get; set; }
 
         public int RoleId { get; set; }
         public Role Role { get; set; }

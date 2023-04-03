@@ -17,6 +17,7 @@ namespace RollerReview.Tables
         public DbSet<Review> Reviews { get; set; }
         public DbSet<Rating> Ratings { get; set; }
         public DbSet<Park> Parks { get; set; }
+        public DbSet<UploadImage> UploadImages { get; set; }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             base.OnConfiguring(optionsBuilder);
