@@ -30,6 +30,7 @@
         {
             this.MyArt = new System.Windows.Forms.PictureBox();
             this.btnSave = new System.Windows.Forms.Button();
+            this.txbName = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.MyArt)).BeginInit();
             this.SuspendLayout();
             // 
@@ -55,11 +56,19 @@
             this.btnSave.UseVisualStyleBackColor = true;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
+            // txbName
+            // 
+            this.txbName.Location = new System.Drawing.Point(385, 394);
+            this.txbName.Name = "txbName";
+            this.txbName.Size = new System.Drawing.Size(187, 31);
+            this.txbName.TabIndex = 2;
+            // 
             // DrawPicturebox
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.txbName);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.MyArt);
             this.Name = "DrawPicturebox";
@@ -67,6 +76,7 @@
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.MyArt)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -74,5 +84,6 @@
 
         private System.Windows.Forms.PictureBox MyArt;
         private System.Windows.Forms.Button btnSave;
+        private System.Windows.Forms.TextBox txbName;
     }
 }

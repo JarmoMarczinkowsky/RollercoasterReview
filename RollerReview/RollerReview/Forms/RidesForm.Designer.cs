@@ -29,18 +29,19 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.btnLogout = new System.Windows.Forms.Button();
             this.lblWelcome = new System.Windows.Forms.Label();
             this.dgvRollercoaster = new System.Windows.Forms.DataGridView();
-            this.btnAddRide = new System.Windows.Forms.Button();
-            this.btnReturn = new System.Windows.Forms.Button();
-            this.btnDrawPage = new System.Windows.Forms.Button();
             this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.parkDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.buildDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.rollercoasterBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.btnAddRide = new System.Windows.Forms.Button();
+            this.btnReturn = new System.Windows.Forms.Button();
+            this.btnDrawPage = new System.Windows.Forms.Button();
+            this.btnShowDraw = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvRollercoaster)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rollercoasterBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -86,14 +87,14 @@
             this.dgvRollercoaster.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgvRollercoaster.BackgroundColor = System.Drawing.SystemColors.Control;
             this.dgvRollercoaster.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvRollercoaster.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvRollercoaster.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvRollercoaster.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvRollercoaster.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.nameDataGridViewTextBoxColumn,
@@ -109,40 +110,6 @@
             this.dgvRollercoaster.Size = new System.Drawing.Size(1015, 583);
             this.dgvRollercoaster.TabIndex = 3;
             this.dgvRollercoaster.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvRollercoaster_CellDoubleClick);
-            // 
-            // btnAddRide
-            // 
-            this.btnAddRide.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.btnAddRide.Location = new System.Drawing.Point(131, 778);
-            this.btnAddRide.Name = "btnAddRide";
-            this.btnAddRide.Size = new System.Drawing.Size(1015, 73);
-            this.btnAddRide.TabIndex = 4;
-            this.btnAddRide.Text = "Add new ride";
-            this.btnAddRide.UseVisualStyleBackColor = false;
-            this.btnAddRide.Visible = false;
-            this.btnAddRide.Click += new System.EventHandler(this.btnAddRide_Click);
-            // 
-            // btnReturn
-            // 
-            this.btnReturn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.btnReturn.Location = new System.Drawing.Point(988, 12);
-            this.btnReturn.Name = "btnReturn";
-            this.btnReturn.Size = new System.Drawing.Size(134, 46);
-            this.btnReturn.TabIndex = 5;
-            this.btnReturn.Text = "Return";
-            this.btnReturn.UseVisualStyleBackColor = false;
-            this.btnReturn.Click += new System.EventHandler(this.btnReturn_Click);
-            // 
-            // btnDrawPage
-            // 
-            this.btnDrawPage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.btnDrawPage.Location = new System.Drawing.Point(1128, 64);
-            this.btnDrawPage.Name = "btnDrawPage";
-            this.btnDrawPage.Size = new System.Drawing.Size(134, 46);
-            this.btnDrawPage.TabIndex = 6;
-            this.btnDrawPage.Text = "Draw";
-            this.btnDrawPage.UseVisualStyleBackColor = false;
-            this.btnDrawPage.Click += new System.EventHandler(this.btnDrawPage_Click);
             // 
             // nameDataGridViewTextBoxColumn
             // 
@@ -175,11 +142,57 @@
             // 
             this.rollercoasterBindingSource.DataSource = typeof(RollerReview.Tables.Rollercoaster);
             // 
+            // btnAddRide
+            // 
+            this.btnAddRide.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.btnAddRide.Location = new System.Drawing.Point(131, 778);
+            this.btnAddRide.Name = "btnAddRide";
+            this.btnAddRide.Size = new System.Drawing.Size(1015, 73);
+            this.btnAddRide.TabIndex = 4;
+            this.btnAddRide.Text = "Add new ride";
+            this.btnAddRide.UseVisualStyleBackColor = false;
+            this.btnAddRide.Visible = false;
+            this.btnAddRide.Click += new System.EventHandler(this.btnAddRide_Click);
+            // 
+            // btnReturn
+            // 
+            this.btnReturn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.btnReturn.Location = new System.Drawing.Point(988, 12);
+            this.btnReturn.Name = "btnReturn";
+            this.btnReturn.Size = new System.Drawing.Size(134, 46);
+            this.btnReturn.TabIndex = 5;
+            this.btnReturn.Text = "Return";
+            this.btnReturn.UseVisualStyleBackColor = false;
+            this.btnReturn.Click += new System.EventHandler(this.btnReturn_Click);
+            // 
+            // btnDrawPage
+            // 
+            this.btnDrawPage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.btnDrawPage.Location = new System.Drawing.Point(1128, 64);
+            this.btnDrawPage.Name = "btnDrawPage";
+            this.btnDrawPage.Size = new System.Drawing.Size(134, 62);
+            this.btnDrawPage.TabIndex = 6;
+            this.btnDrawPage.Text = "Draw";
+            this.btnDrawPage.UseVisualStyleBackColor = false;
+            this.btnDrawPage.Click += new System.EventHandler(this.btnDrawPage_Click);
+            // 
+            // btnShowDraw
+            // 
+            this.btnShowDraw.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.btnShowDraw.Location = new System.Drawing.Point(988, 64);
+            this.btnShowDraw.Name = "btnShowDraw";
+            this.btnShowDraw.Size = new System.Drawing.Size(134, 62);
+            this.btnShowDraw.TabIndex = 7;
+            this.btnShowDraw.Text = "Show drawing";
+            this.btnShowDraw.UseVisualStyleBackColor = false;
+            this.btnShowDraw.Click += new System.EventHandler(this.btnShowDraw_Click);
+            // 
             // RidesForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1274, 879);
+            this.Controls.Add(this.btnShowDraw);
             this.Controls.Add(this.btnDrawPage);
             this.Controls.Add(this.btnReturn);
             this.Controls.Add(this.btnAddRide);
@@ -210,5 +223,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn buildDataGridViewTextBoxColumn;
         private System.Windows.Forms.Button btnReturn;
         private System.Windows.Forms.Button btnDrawPage;
+        private System.Windows.Forms.Button btnShowDraw;
     }
 }

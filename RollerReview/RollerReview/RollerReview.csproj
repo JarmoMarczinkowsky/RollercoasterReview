@@ -170,6 +170,12 @@
     <Compile Include="Forms\RidesForm.Designer.cs">
       <DependentUpon>RidesForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\ShowDrawingForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ShowDrawingForm.Designer.cs">
+      <DependentUpon>ShowDrawingForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -186,6 +192,7 @@
     <Compile Include="Tables\Role.cs" />
     <Compile Include="Tables\RoleUser.cs" />
     <Compile Include="Tables\Rollercoaster.cs" />
+    <Compile Include="Tables\UploadImage.cs" />
     <Compile Include="Tables\User.cs" />
     <EmbeddedResource Include="Forms\CreateRideForm.resx">
       <DependentUpon>CreateRideForm.cs</DependentUpon>
@@ -205,6 +212,9 @@
     <EmbeddedResource Include="Forms\RidesForm.resx">
       <DependentUpon>RidesForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ShowDrawingForm.resx">
+      <DependentUpon>ShowDrawingForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -222,6 +232,7 @@
     <None Include="Properties\DataSources\RollerReview.Tables.Park.datasource" />
     <None Include="Properties\DataSources\RollerReview.Tables.Review.datasource" />
     <None Include="Properties\DataSources\RollerReview.Tables.Rollercoaster.datasource" />
+    <None Include="Properties\DataSources\RollerReview.Tables.UploadImage.datasource" />
     <None Include="Properties\DataSources\RollerReview.Tables.User.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
